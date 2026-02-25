@@ -1,7 +1,99 @@
-echo "# djdubgee-create.github.io" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/djdubgee-create/djdubgee-create.github.io.git
-git push -u origin main
+:root{
+  --bg:#0b0f17;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#22c55e;
+  --accent2:#60a5fa;
+  --border:rgba(255,255,255,.10);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,15,23,.85);backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:40px;height:40px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;font-weight:800;color:#061018;
+}
+.brand h1{font-size:16px;margin:0;letter-spacing:.5px}
+.brand small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.links{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.links a{padding:10px 12px;border-radius:12px;color:var(--muted)}
+.links a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#061018;font-weight:800;border:0;border-radius:14px;
+  padding:12px 14px;cursor:pointer;
+}
+.cta:hover{filter:brightness(1.05)}
+.hero{
+  padding:56px 0 18px;
+  background:
+    radial-gradient(800px 300px at 20% 10%, rgba(34,197,94,.25), transparent 60%),
+    radial-gradient(800px 300px at 80% 15%, rgba(96,165,250,.25), transparent 60%);
+}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{
+  background:rgba(17,24,39,.7);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px;
+}
+.kicker{color:var(--accent);font-weight:800;letter-spacing:.6px;text-transform:uppercase;font-size:12px}
+h2{margin:10px 0 10px;font-size:40px;line-height:1.05}
+@media (max-width:600px){h2{font-size:32px}}
+p{color:var(--muted);line-height:1.6;margin:10px 0}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.badge{
+  font-size:12px;color:var(--text);
+  border:1px solid var(--border);
+  padding:8px 10px;border-radius:999px;
+  background:rgba(255,255,255,.04);
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.secondary{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:12px 14px;border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  color:var(--text);font-weight:700;
+}
+.secondary:hover{background:rgba(255,255,255,.07)}
+.section{padding:24px 0}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.feature h3{margin:8px 0 6px}
+.feature p{margin:0;color:var(--muted)}
+.footer{
+  margin-top:24px;border-top:1px solid var(--border);
+  padding:20px 0;color:var(--muted)
+}
+.embed-wrap{border-radius:18px;overflow:hidden;border:1px solid var(--border);background:rgba(0,0,0,.15)}
+.small{font-size:12px;color:var(--muted)}
+hr.sep{border:0;border-top:1px solid var(--border);margin:16px 0}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){.form-row{grid-template-columns:1fr}}
+input,textarea,select{
+  width:100%;padding:12px 12px;border-radius:14px;
+  border:1px solid var(--border);background:rgba(255,255,255,.04);
+  color:var(--text);outline:none
+}
+textarea{min-height:130px;resize:vertical}
+label{display:block;margin:10px 0 6px;color:var(--muted);font-size:13px}
+.notice{padding:12px;border-radius:14px;background:rgba(34,197,94,.10);border:1px solid rgba(34,197,94,.25);color:var(--text)}
+.sticky-book{
+  position:fixed;right:16px;bottom:16px;z-index:60;
+  display:none;
+}
+@media (max-width:800px){.sticky-book{display:block}}
