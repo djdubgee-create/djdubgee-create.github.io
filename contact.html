@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DJ Dub Gee | Contact</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo">DG</div>
+        <div>
+          <h1>DJ Dub Gee</h1>
+          <small>Booking Requests • Promoters • Venues</small>
+        </div>
+      </div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Bookings</div>
+        <h2 style="margin:10px 0 0;font-size:34px">Request availability</h2>
+        <p>Fastest contact: <a href="mailto:djdubgee@gmail.com"><strong>djdubgee@gmail.com</strong></a>
+          <button class="secondary" style="padding:8px 10px;margin-left:8px" onclick="copyToClipboard('djdubgee@gmail.com')">Copy</button>
+        </p>
+
+        <hr class="sep"/>
+
+        <!-- OPTION A: Real form (recommended). Create a Formspree endpoint and paste it below. -->
+        <p class="small">To make this form send to your email, create a free Formspree form and replace the action URL.</p>
+
+        <form class="card" style="padding:14px"
+              action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+              method="POST">
+          <div class="form-row">
+            <div>
+              <label>Your name / promoter name</label>
+              <input name="name" required placeholder="e.g., Mike (Promoter)"/>
+            </div>
+            <div>
+              <label>Best contact (email/phone)</label>
+              <input name="contact" required placeholder="e.g., mike@email.com or 404-555-1234"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Date</label>
+              <input name="date" placeholder="MM/DD/YYYY"/>
+            </div>
+            <div>
+              <label>Venue / City</label>
+              <input name="venue" placeholder="Venue name + city"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>Set time</label>
+              <input name="set_time" placeholder="e.g., 11pm–2am"/>
+            </div>
+            <div>
+              <label>Budget</label>
+              <input name="budget" placeholder="e.g., $500–$800"/>
+            </div>
+          </div>
+
+          <label>Details</label>
+          <textarea name="details" placeholder="Crowd size, vibe, genre preference, equipment needs, load-in, etc."></textarea>
+
+          <div class="actions">
+            <button class="cta" type="submit">Send Booking Request</button>
+            <a class="secondary" href="mailto:djdubgee@gmail.com?subject=Booking%20Inquiry%20-%20DJ%20Dub%20Gee">Email Instead</a>
+          </div>
+        </form>
+
+        <p class="small">
+          If you'd rather keep it simple, remove the form and just use the Email Instead button.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="yr"></span> DJ Dub Gee • <a href="mailto:djdubgee@gmail.com">djdubgee@gmail.com</a>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
