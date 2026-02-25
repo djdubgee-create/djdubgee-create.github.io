@@ -1,0 +1,42 @@
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  color: #ffffff;
+}
+
+.dark-theme a {
+  color: #bb86fc;
+}
+
+.dark-theme button {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.dark-theme input {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.dark-theme img {
+  filter: brightness(0.8);
+}
+
+.dark-theme hr {
+  border-color: #555;
+}
+
+.dark-theme .card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
